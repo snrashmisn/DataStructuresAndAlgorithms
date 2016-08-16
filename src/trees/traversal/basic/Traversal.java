@@ -1,4 +1,4 @@
-package trees.traversal;
+package trees.traversal.basic;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,9 +23,10 @@ public abstract class Traversal {
         root.right.right = new TreeNode(7);
 
 
-        printTraversal(new PreOrderTraversal(), root);
-        printTraversal(new InOrderTraversal(), root);
-        printTraversal(new PostOrderTraversal(), root);
+        printTraversal(new DFSPreOrderTraversal(), root);
+        printTraversal(new DFSInOrderTraversal(), root);
+        printTraversal(new DFSPostOrderTraversal(), root);
+        printTraversal(new BFSTraversal(), root);
     }
     
     private static void printTraversal(Traversal traversal, TreeNode root){

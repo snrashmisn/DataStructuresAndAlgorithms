@@ -1,4 +1,4 @@
-package trees.traversal;
+package trees.traversal.basic;
 
 /**
  * Created by rasn on 8/15/16.

@@ -1,4 +1,4 @@
-package trees.traversal;
+package trees.traversal.basic;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -6,7 +6,7 @@ import java.util.Deque;
 /**
  * Created by rasn on 8/15/16.
  */
-public class InOrderTraversal extends Traversal{
+public class DFSInOrderTraversal extends Traversal{
     @Override
     public void recursiveTraversal(TreeNode root) {
         if(root == null) return;
