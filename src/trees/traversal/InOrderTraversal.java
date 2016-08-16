@@ -22,7 +22,7 @@ public class InOrderTraversal extends Traversal{
         Keep traversing to left until null ( push all the elements u come across).
         Pop element and print.
         Go to it's right if it is present and Keep traversing to left until null ( push all the elements u come across).
-        Repeat the above 2 entries until stack is not empty.
+        Repeat the above 2 steps until stack is not empty.
          */
         if(root == null) return;
         Deque<TreeNode> stack = new ArrayDeque<>();
