@@ -40,7 +40,13 @@ public class RemoveDuplicateNumbersInSortedList {
             currentNode = currentNode.next;
         }
         if(isCurrentValDuplicate == false){
-            navigator.next = prevNode;
+            if(newHead != null ){
+                navigator.next = prevNode;
+            } else {
+                newHead = prevNode;
+            }
+        } else {
+            navigator.next = null;
         }
         return newHead;
     }
