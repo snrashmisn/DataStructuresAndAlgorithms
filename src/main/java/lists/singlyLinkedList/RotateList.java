@@ -9,32 +9,33 @@ public class RotateList {
         if(head == null || head.next == null || k <= 0) return head;
         ListNode kthpointer = null;
         ListNode currentNode = head;
+        ListNode prevNode = null;
         int i = 1;
-        while(currentNode.next != null){
+        while(currentNode != null){
             if(i == k){
                 kthpointer = currentNode;
             }
+            prevNode = currentNode;
             currentNode = currentNode.next;
             i++;
         }
-        System.out.println("i = " + i);
-
         if(i == k || k % i == 0) return head;
         if(k > i){
             k = k % i;
             kthpointer = null;
             currentNode = head;
             i = 1;
-            while(currentNode.next != null){
+            while(currentNode != null){
                 if(i == k){
                     kthpointer = currentNode;
                 }
+                prevNode = currentNode;
                 currentNode = currentNode.next;
                 i++;
             }
         }
 
-        currentNode.next = head;
+        prevNode.next = head;
         head = kthpointer.next;
         kthpointer.next = null;
 

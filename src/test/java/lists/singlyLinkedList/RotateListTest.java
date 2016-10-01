@@ -52,11 +52,11 @@ public class RotateListTest extends TestCase {
     public void testRotateRight5() throws Exception {
 
         ListNode head = ListNode.createList();
-        System.out.println("2000000000 % 3 = " + 2000000000 % 3);;
+        head.next.next.next = null;
         RotateList rotate = new RotateList();
         System.out.println("head = " + head);
-        head = rotate.rotateRight(head, 8);
+        head = rotate.rotateRight(head, 2);
         System.out.println("head = " + head);
-        assertTrue(head.toString().equals("1 -> 2 -> 3 -> 4"));
+        assertTrue(head.toString().equals("3 -> 1 -> 2"));
     }
 }
